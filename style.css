@@ -1,0 +1,422 @@
+/* set variables */
+
+:root {
+    --pika-yellow:#FFF2AD;
+    --dark-yellow:#fcd200;
+    --grey:#414141;
+}
+
+/* disable selecting */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* add fonts */
+
+@font-face {
+    font-family: 'Metric Light';
+    src: url('fonts/metric-light.woff2') format('woff2'),
+         url('fonts/metric-light.woff') format('woff'),
+         url('fonts/metric-light.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Metric Regular';
+    src: url('fonts/metric-regular.woff2') format('woff2'),
+         url('fonts/metric-regular.woff') format('woff'),
+         url('fonts/metric-regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Metric Semibold';
+    src: url('fonts/metric-semibold.woff2') format('woff2'),
+         url('fonts/metric-semibold.woff') format('woff'),
+         url('fonts/metric-semibold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Bokutachi no Gothic 2 Bold';
+    src: url('fonts/Boku2-Bold.otf') format('opentype');
+}
+
+/* general styles & typefaces */
+
+body {
+    background:#fff;
+    color:var(--grey);
+    font-family: 'Metric Regular', sans-serif;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+body, html {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    font-size:2em;
+    font-family: 'Metric Semibold', sans-serif;
+}
+
+h2 {
+    font-size:1.25em;
+    font-weight:bold;
+    font-family: 'Metric Regular', sans-serif;
+}
+
+h2.subtitle {
+    font-weight:lighter;
+    font-family: 'Metric Light', sans-serif;
+}
+
+nav, #main {
+    z-index:100;
+}
+
+.tablink {
+    font-weight:bold;
+}
+
+input, button {
+    font-family:'Metric Regular', san-serif;
+    font-size:1em;
+}
+
+label {
+    font-weight:bold;
+}
+
+/* navbar */
+
+#hamburger img {
+    width:100%;
+}
+
+#hamburger {
+    width:5%;
+}
+
+#links {
+    width:80%;
+    display:flex;
+}
+
+#links li {
+    text-align:center;
+    width:100%;
+}
+
+nav, .navbar {
+    width:100%;
+    cursor:pointer;
+}
+
+.navbar {
+    background:var(--pika-yellow);
+    display:flex;
+    padding:0;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.navbar li {
+    list-style-type:none;
+    padding:0rem 0.5rem;
+    flex-flow:row nowrap;
+    display: inline;
+    font-size:1.2em;
+}
+.navbar li a, .navbar a {
+    text-decoration: none;
+    color:var(--grey);
+}
+
+.navbar a:hover {
+    color:#fff;
+    transition:color 300ms;
+}
+
+#links {
+    visibility:hidden;
+    transition:opacity 300ms;
+}
+
+hr { 
+    margin:1.5rem 0rem;
+    text-align:center;
+    border:1px solid #f3f3f3;
+    border-radius:10rem;
+    background-color:#f3f3f3;
+    color:#f3f3f3;
+}
+
+/* main */
+
+#main {
+    text-align: center;
+    padding:2rem;
+}
+
+#title {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items: center;
+    text-align:left;
+}
+
+#main h1, #main h2 {
+    margin:0;
+}
+
+#mainsprite {
+    height:45vh;
+    width:auto;
+}
+
+/* curved top yellow bg */
+
+#topbg {
+    background:var(--pika-yellow);
+    width:100%;
+    height:70%;
+    z-index:-1000;
+    position: absolute;
+    top:-15vh;
+    left:0;
+    border-radius:5rem;
+}
+
+/* content */
+
+#content .navbar {
+    background:none;    
+}
+
+#content .navbar li {
+    /* padding:0.25rem 2rem; */
+    width:100%;
+    border-bottom:2px solid #a3a3a3;
+    transition:border-color 300ms;
+}
+
+#content .navbar .active {
+    border-color:var(--dark-yellow);
+}
+
+#infos {
+    margin-top:1.5rem;
+    text-align:left;
+}
+
+#ability, #variant {
+    display: none;
+}
+
+#variant .contain {
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+#variant img {
+    max-height:20vh;
+    width:15vw;
+    float:left;
+    object-fit:cover;
+}
+
+/* form */
+
+#subscribe {
+    text-align:center;
+}
+
+form {
+    margin-top:1rem;
+    width:100%;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    width:40%;
+    margin:0.25em;
+    text-align:left;
+    flex:0 0 auto;
+}
+
+.form-group:nth-of-type(3) {
+    flex:1 0 100%;
+}
+
+form input {
+    width:100%;
+    border:0.15rem solid var(--pika-yellow);
+    border-radius:1.25rem;
+    height:2em;
+    padding:1.5em 1rem;
+    margin:0.25em 0rem;
+    box-sizing:border-box;
+    transition:border 300ms;
+}
+
+form input:focus {
+    outline:none;
+    border-color:var(--dark-yellow);
+    transition:border 300ms;
+}
+
+.form-group:last-of-type {
+    margin-top:1rem;
+    width:100%;
+    text-align:center;
+}
+
+form button {
+    padding:0.75rem 0.75rem 0.5rem 0.75rem;
+    vertical-align: middle;
+    text-transform: lowercase;
+    background:var(--pika-yellow);
+    border-radius:1rem;
+    color:var(--grey);
+    border:0.15rem solid var(--dark-yellow);
+    box-shadow:none;
+    transition:background-color 300ms;
+}
+
+form button:hover {
+    background:#fff;
+    transition:background-color 300ms;
+}
+
+form button:active {
+    background:var(--dark-yellow);
+    color:#fff;
+}
+
+#name {
+    visibility:hidden;
+}
+
+/* for screens under 375px */
+@media only screen and (max-width : 374px) {
+    /* curved top yellow bg */
+    #topbg {
+        width:107vw;
+        height:55vh;
+    }
+    #mainsprite {
+        max-width:auto;
+        min-height:30vh;
+    }
+    #links li {
+        font-size:0.7em;
+    }
+}
+
+/* apply style if screen is wider than 1024px */
+@media only screen and (min-width : 1024px) {
+    body {
+        background:var(--pika-yellow);
+    }
+    h1 {
+        font-size:3em;
+        margin-bottom:0;
+    }
+    #title .header .subtitle, #topbg, .navbar, #about h2 {
+        display:none;
+    }
+    #title {
+        justify-content: flex-start;
+        align-items:flex-start;
+        flex-flow:column nowrap;
+    }
+    .subtitle, h2 {
+        font-size:2em;
+    }
+    h3 {
+        margin:0;
+    }
+    #dexnumber {
+        order:-1;
+    }
+    #mainsprite {
+        height:100vh;
+        z-index:-100;
+        align-self:flex-end;
+    }
+    #main {
+        display:flex;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    #title, #mainsprite, #content {
+        flex:1 0;
+    }
+    #infos {
+        margin-top:0;
+    }
+    #ability, #variant {
+        display:block;
+        text-align:right;
+    }
+    #content p {
+        margin:0;
+        font-size:1.1em;
+    }
+    #about {
+        margin-top:-1.5em;
+    }
+    #about p {
+        margin-bottom:0;
+    }
+    #variant img {
+        height:8vh;
+        width:auto;
+    }
+    #variant {
+        margin-top:3vh;
+    }
+    hr {
+        border:1px solid var(--grey);
+        background:var(--grey);
+        color:var(--grey);
+    }
+    #subscribe {
+        width:100%;
+        text-align:left;
+    }
+    #subscribe span {        
+        font-size:1.2em;
+    }
+    #subscribe form {
+        flex-flow:column nowrap;
+        justify-content: center;
+    }
+    #subscribe .form-group {
+        width:100%;
+    }
+    #name {
+        z-index:-50;
+        visibility:visible;
+        position: absolute;
+        bottom:0vh;
+        color:rgba(255,255,255,0.4);
+        font-size:10em;
+        font-weight:bold;
+        font-family:'Bokutachi no Gothic 2 Bold', serif;
+    }
+}

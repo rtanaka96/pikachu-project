@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Pikachu</title>
+</head>
+
+<body>
+    <div id="topbg"></div>
+    <nav>
+        <ul class="navbar">
+            <div id="links">
+                <li><a href="#">top</a></li>
+                <li><a href="#infos">info</a></li>
+                <li><a href="#ability">abilities</a></li>
+                <li><a href="#variant">variants</a></li>
+                <li><a href="#credits">credits</a></li>
+            </div>
+            <span id="hamburger"><a href="#"><img src="img/hamburg.webp"></a></span>
+        </ul>
+    </nav>
+    <section id="main">
+        <span id="name">ピカチュウ</span>
+        <div id="title">
+            <div class="header">
+                <h1>Pikachu</h1>
+                <h2 class="subtitle">Electric type</h2>
+            </div>
+            <h2 class="subtitle" id="dexnumber">#025</h2>
+        </div>
+        <img id="mainsprite" src="">
+        <div id="content">
+            <div id="tabs">
+                <ul class="navbar">
+                    <li class="tablink active" id="abouttab">about</li>
+                    <li class="tablink" id="abilitytab">abilities</li>
+                    <li class="tablink" id="varianttab">variants</li>
+                </ul>
+            </div>
+            <div id="infos">
+                <div id="about" class="tabcontent">
+                    <h2>Mouse Pokémon | Game mascot</h2>
+                    <p>Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super
+                        stretchy.</p>
+                </div>
+
+                <div id="ability" class="tabcontent">
+                    <h2>Abilities</h2>
+                    <h3>Static</h3>
+                    <p>The Pokémon is charged with static electricity, so contact with it may cause paralysis.
+                    </p>
+
+                    <h3>Lightning Rod</h3>
+                    <p>The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it
+                        boosts its Sp. Atk.</p>
+                </div>
+
+                <div id="variant" class="tabcontent">
+                    <div class="contain">
+                        <h2>Variants</h2>
+                        <div class="types">
+                            <h3>Surfing Pikachu</h3>
+                            <img src="img/variants/surfing.webp">
+                            <p>Surfing Pikachu is a Pikachu with a surfboard. With this, it is able to wield the move
+                                Surf.</p>
+                        </div>
+                        <div class="types">
+                            <h3>Flying Pikachu</h3>
+                            <img src="img/variants/flying.webp">
+                            <p>Flying Pikachu is a Pikachu with balloons. With them, he is able to wield the move Fly.
+                            </p>
+                        </div>
+                        <div class="types">
+                            <h3>Gigantamax Pikachu</h3>
+                            <img src="img/variants/gigantamax.webp">
+                            <p>Gigantamax is a special kind of Dynamax introduced in Generation VIII. Like other
+                                Dynamaxing, Gigantamaxing increases a Pokémon's size drastically and its HP in battle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="subscribe">
+                <hr>
+                <span>Subscribe to our Pikachu fanpage for more chonky Pikachu!</span>
+                <form id="subscribeForm" action="" autocomplete="off">
+                    <div class="form-group">
+                        <label for="firstname">First name:</label><br>
+                        <input type="text" id="firstname" name="firstname"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last name:</label><br>
+                        <input type="text" id="lastname" name="lastname"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"><br>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="submitBtn">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
