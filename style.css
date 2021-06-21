@@ -45,12 +45,22 @@
     src: url('fonts/Boku2-Bold.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Pokemon GB';
+    src: url('fonts/PokemonGb-RAeo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Pokemon GB Japan KT';
+    src: url('fonts/PokemonGbJapanKt-8Rw2.ttf') format('truetype');
+}
+
 /* general styles & typefaces */
 
 body {
     background:#fff;
-    color:var(--grey);
-    font-family: 'Metric Regular', sans-serif;
+    color:#000;
+    font-family: 'Pokemon GB', sans-serif;
     overflow-y:scroll;
     overflow-x:hidden;
 }
@@ -64,18 +74,18 @@ body, html {
 
 h1 {
     font-size:2em;
-    font-family: 'Metric Semibold', sans-serif;
+    font-family: 'Pokemon GB', sans-serif;
 }
 
 h2 {
     font-size:1.25em;
     font-weight:bold;
-    font-family: 'Metric Regular', sans-serif;
+    font-family: 'Pokemon GB', sans-serif;
 }
 
 h2.subtitle {
     font-weight:lighter;
-    font-family: 'Metric Light', sans-serif;
+    font-family: 'Pokemon GB', sans-serif;
 }
 
 nav, #main {
@@ -84,10 +94,11 @@ nav, #main {
 
 .tablink {
     font-weight:bold;
+    padding:1em 0.5em !important;
 }
 
 input, button {
-    font-family:'Metric Regular', san-serif;
+    font-family:'Pokemon GB', san-serif;
     font-size:1em;
 }
 
@@ -133,7 +144,7 @@ nav, .navbar {
     padding:0rem 0.5rem;
     flex-flow:row nowrap;
     display: inline;
-    font-size:1.2em;
+    font-size:1em;
 }
 .navbar li a, .navbar a {
     text-decoration: none;
@@ -202,6 +213,11 @@ hr {
     background:none;    
 }
 
+#content p {
+    font-size:0.9em;
+    line-height:1.5em;
+}
+
 #content .navbar li {
     /* padding:0.25rem 2rem; */
     width:100%;
@@ -240,8 +256,12 @@ hr {
     text-align:center;
 }
 
+#subscribe span {
+    font-size:0.7em;
+}
+
 form {
-    margin-top:1rem;
+    margin-top:1.5rem;
     width:100%;
     display:flex;
     flex-flow:row wrap;
@@ -284,7 +304,7 @@ form input:focus {
 }
 
 form button {
-    padding:0.75rem 0.75rem 0.5rem 0.75rem;
+    padding:0.75rem;
     vertical-align: middle;
     text-transform: lowercase;
     background:var(--pika-yellow);
@@ -309,7 +329,7 @@ form button:active {
     visibility:hidden;
 }
 
-/* for screens under 375px */
+/* for smaller than typical mobile screens under 375px */
 @media only screen and (max-width : 374px) {
     /* curved top yellow bg */
     #topbg {
@@ -325,8 +345,8 @@ form button:active {
     }
 }
 
-/* apply style if screen is wider than 1024px */
-@media only screen and (min-width : 1024px) {
+/* for desktop/bigger screens wider than 1400px */
+@media only screen and (min-width : 1400px) {
     body {
         background:var(--pika-yellow);
     }
@@ -341,12 +361,13 @@ form button:active {
         justify-content: flex-start;
         align-items:flex-start;
         flex-flow:column nowrap;
+        padding:0.5rem;
     }
     .subtitle, h2 {
         font-size:2em;
     }
     h3 {
-        margin:0;
+        margin:1.25em 0em;
     }
     #dexnumber {
         order:-1;
@@ -355,6 +376,9 @@ form button:active {
         height:100vh;
         z-index:-100;
         align-self:flex-end;
+    }
+    #main h1 {
+        margin-top:0.25em;
     }
     #main {
         display:flex;
@@ -372,15 +396,20 @@ form button:active {
     #ability, #variant {
         display:block;
         text-align:right;
+        padding:0.25rem;
     }
     #content p {
         margin:0;
-        font-size:1.1em;
+    }
+    .tabcontent {
+        font-size:0.85em;
+        line-height:1.2rem;
     }
     #about {
         margin-top:-1.5em;
     }
     #about p {
+        margin-top:2.5rem;
         margin-bottom:0;
     }
     #variant img {
@@ -400,7 +429,7 @@ form button:active {
         text-align:left;
     }
     #subscribe span {        
-        font-size:1.2em;
+        font-size:0.8em;
     }
     #subscribe form {
         flex-flow:column nowrap;
@@ -413,10 +442,10 @@ form button:active {
         z-index:-50;
         visibility:visible;
         position: absolute;
-        bottom:0vh;
+        bottom:5vh;
         color:rgba(255,255,255,0.4);
         font-size:10em;
         font-weight:bold;
-        font-family:'Bokutachi no Gothic 2 Bold', serif;
+        font-family:'Pokemon GB Japan KT', serif;
     }
 }

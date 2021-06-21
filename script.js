@@ -81,7 +81,7 @@ window.onload = function () {
         const titleElement = document.getElementById('title');
         const aboutElement = document.getElementById('about');
         const formElement = document.getElementById('subscribe');
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth >= 1440) {
             titleElement.appendChild(aboutElement);
             titleElement.appendChild(formElement);
         }
