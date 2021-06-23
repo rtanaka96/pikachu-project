@@ -22,10 +22,12 @@ window.onload = function () {
         if (links.style.visibility == "visible") {
             links.style.visibility = "hidden";
             links.style.opacity = "0";
+            hamburg.src = "img/hamburg.webp";
         }
         else {
             links.style.visibility = "visible";
             links.style.opacity = "1";
+            hamburg.src = "img/close.webp";
         }
     }
 

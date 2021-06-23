@@ -61,6 +61,7 @@ body {
     background:#fff;
     color:#000;
     font-family: 'Pokemon GB', sans-serif;
+    font-display: swap;
     overflow-y:scroll;
     overflow-x:hidden;
 }
@@ -108,22 +109,24 @@ label {
 
 /* navbar */
 
-#hamburger img {
+#hamburger {
     width:100%;
 }
 
-#hamburger {
-    width:5%;
+#hamburgmenu {
+    flex-basis:10%;
 }
 
 #links {
-    width:80%;
+    flex-basis:90%;
     display:flex;
+    padding:0 1rem;
+    justify-content:space-between;
 }
 
 #links li {
     text-align:center;
-    width:100%;
+    padding:0;
 }
 
 nav, .navbar {
@@ -134,7 +137,8 @@ nav, .navbar {
 .navbar {
     background:var(--pika-yellow);
     display:flex;
-    padding:0;
+    box-sizing: border-box;
+    padding:0 0.5rem;
     justify-content: space-evenly;
     align-items:center;
 }
@@ -144,7 +148,7 @@ nav, .navbar {
     padding:0rem 0.5rem;
     flex-flow:row nowrap;
     display: inline;
-    font-size:1em;
+    font-size:0.5em;
 }
 .navbar li a, .navbar a {
     text-decoration: none;
@@ -223,6 +227,7 @@ hr {
     width:100%;
     border-bottom:2px solid #a3a3a3;
     transition:border-color 300ms;
+    font-size:.65em;
 }
 
 #content .navbar .active {
@@ -327,22 +332,6 @@ form button:active {
 
 #name {
     visibility:hidden;
-}
-
-/* for smaller than typical mobile screens under 375px */
-@media only screen and (max-width : 374px) {
-    /* curved top yellow bg */
-    #topbg {
-        width:107vw;
-        height:55vh;
-    }
-    #mainsprite {
-        max-width:auto;
-        min-height:30vh;
-    }
-    #links li {
-        font-size:0.7em;
-    }
 }
 
 /* for desktop/bigger screens wider than 1400px */
