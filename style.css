@@ -74,14 +74,18 @@ body, html {
 }
 
 h1 {
-    font-size:2em;
+    font-size:1.5em;
     font-family: 'Pokemon GB', sans-serif;
 }
 
 h2 {
-    font-size:1.25em;
+    font-size:0.8em;
     font-weight:bold;
     font-family: 'Pokemon GB', sans-serif;
+}
+
+h3 {
+    font-size:0.7em;
 }
 
 h2.subtitle {
@@ -154,7 +158,7 @@ nav, .navbar {
     padding:0rem 0.5rem;
     flex-flow:row nowrap;
     display: inline;
-    font-size:1em;
+    font-size:0.65em;
 }
 .navbar li a, .navbar a, .navbar li {
     text-decoration: none;
@@ -208,11 +212,11 @@ hr {
 
 #topbg {
     background:var(--pika-yellow);
-    width:100%;
-    height:70%;
+    width:100vw;
+    height:75vh;
     z-index:-1000;
     position: absolute;
-    top:-15vh;
+    top:-20vh;
     left:0;
     border-radius:5rem;
 }
@@ -233,7 +237,7 @@ hr {
     width:100%;
     border-bottom:2px solid #a3a3a3;
     transition:border-color 300ms, color 300ms;
-    font-size:0.9em;
+    font-size:0.7em;
 }
 
 #content .navbar li:hover {
@@ -384,8 +388,29 @@ form button:active {
     bottom:12vh;
 }
 
+/* for slightly larger screens smaller than desktops */
+@media only screen and (min-width:800px) and (max-width:1399px) {
+    #links li {
+        font-size:1em;
+    }
+    #content .navbar li {
+        font-size:1.25em;
+    }
+    h1 {
+        font-size:2em;
+    }
+    h2 {
+        font-size:1.5em;
+    }
+    h3 {
+        font-size:1em;
+    }
+    #credits p, #credits a {
+        font-size:1.5em;
+    }
+}
 /* for desktop/bigger screens wider than 1400px */
-@media only screen and (min-width : 1400px) {
+@media only screen and (min-width:1400px) {
     body {
         background:var(--pika-yellow);
     }
