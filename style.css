@@ -114,11 +114,12 @@ label {
 }
 
 #hamburgmenu {
-    flex-basis:10%;
+    flex-basis:5%;
+    padding:0 1rem;
 }
 
 #links {
-    flex-basis:90%;
+    flex-basis:95%;
     display:flex;
     padding:0 1rem;
     justify-content:space-between;
@@ -143,7 +144,7 @@ nav, .navbar {
     background:var(--pika-yellow);
     display:flex;
     box-sizing: border-box;
-    padding:0 0.5rem;
+    padding:1rem;
     justify-content: space-evenly;
     align-items:center;
 }
@@ -232,7 +233,7 @@ hr {
     width:100%;
     border-bottom:2px solid #a3a3a3;
     transition:border-color 300ms, color 300ms;
-    font-size:.65em;
+    font-size:0.9em;
 }
 
 #content .navbar li:hover {
@@ -344,13 +345,43 @@ form button:active {
     visibility:hidden;
 }
 
-@media only screen and (min-width : 800px) {
-    #links li {
-        font-size:0.8em;
-    }
-    #content .navbar li {
-        font-size:1em;
-    }
+/* credits */
+
+#credits {
+    position:absolute;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background:var(--pika-yellow);
+    z-index:100;
+    padding:2rem;
+    display:none;
+    overflow:hidden;
+}
+
+#credits p, #credits a {
+    font-size:0.8em;
+}
+
+#creditsClose {
+    width:2vw;
+    cursor:pointer;
+}
+
+#credits a, #credits a:visited {
+    color:var(--grey);
+    transition:color 300ms;
+}
+
+#credits a:hover {
+    color:#fff;
+}
+
+#smolpika {
+    position: absolute;
+    width:20vw;
+    right:20vw;
+    bottom:12vh;
 }
 
 /* for desktop/bigger screens wider than 1400px */

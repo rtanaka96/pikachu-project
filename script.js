@@ -16,14 +16,29 @@ window.onload = function () {
     const hamburg = document.getElementById('hamburger');
     hamburg.addEventListener("click", menuToggle);
     
+    //scroll to content
     document.getElementById('contentLink').addEventListener('click',function() {
         let activeTab = document.getElementsByClassName('active');
         let activeDiv = document.getElementById(activeTab[0].id.slice(0,-3));
         activeDiv.scrollIntoView({ block: 'center', behavior: 'smooth' });
     });
+
+    //credits menu
+    document.getElementById('creditsLink').addEventListener('click',function() {
+        const credits = document.getElementById('credits');
+        credits.style.display = 'block';
+        //prevent scroll while modal is open
+        document.body.style.position = 'fixed';
+    });
+
+    //close credits
+    document.getElementById('creditsClose').addEventListener('click',function() {
+        credits.style.display = 'none';
+        document.body.style.position = '';
+    });
     
     function menuToggle() {
-        let links = document.getElementById('links');
+        const links = document.getElementById('links');
 
         if (links.style.visibility == "visible") {
             links.style.visibility = "hidden";
@@ -33,7 +48,7 @@ window.onload = function () {
         else {
             links.style.visibility = "visible";
             links.style.opacity = "1";
-            hamburg.src = "img/close.webp";
+            hamburg.src = "img/x.webp";
         }
     }
 
