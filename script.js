@@ -15,7 +15,13 @@ window.onload = function () {
     //hamburger menu
     const hamburg = document.getElementById('hamburger');
     hamburg.addEventListener("click", menuToggle);
-
+    
+    document.getElementById('contentLink').addEventListener('click',function() {
+        let activeTab = document.getElementsByClassName('active');
+        let activeDiv = document.getElementById(activeTab[0].id.slice(0,-3));
+        activeDiv.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+    
     function menuToggle() {
         let links = document.getElementById('links');
 
@@ -52,7 +58,7 @@ window.onload = function () {
 
         //get id for relevant tab content from clicked tab and show it
         let rawTab = e.target.id;
-        let editedTab = rawTab.slice(0, -3);
+        let editedTab = rawTab.slice(0,-3);
         document.getElementById(editedTab).style.display = 'block';
 
         //scroll to displayed content

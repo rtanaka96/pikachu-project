@@ -134,6 +134,11 @@ nav, .navbar {
     cursor:pointer;
 }
 
+#links {
+    padding:0 1rem;
+    justify-content: space-around;
+}
+
 .navbar {
     background:var(--pika-yellow);
     display:flex;
@@ -148,14 +153,14 @@ nav, .navbar {
     padding:0rem 0.5rem;
     flex-flow:row nowrap;
     display: inline;
-    font-size:0.5em;
+    font-size:0.65em;
 }
-.navbar li a, .navbar a {
+.navbar li a, .navbar a, .navbar li {
     text-decoration: none;
     color:var(--grey);
 }
 
-.navbar a:hover {
+.navbar a:hover, #links li:hover {
     color:#fff;
     transition:color 300ms;
 }
@@ -226,8 +231,13 @@ hr {
     /* padding:0.25rem 2rem; */
     width:100%;
     border-bottom:2px solid #a3a3a3;
-    transition:border-color 300ms;
+    transition:border-color 300ms, color 300ms;
     font-size:.65em;
+}
+
+#content .navbar li:hover {
+    color:#8a8a8a;
+    transition:color 300ms;
 }
 
 #content .navbar .active {
@@ -332,6 +342,15 @@ form button:active {
 
 #name {
     visibility:hidden;
+}
+
+@media only screen and (min-width : 800px) {
+    #links li {
+        font-size:0.8em;
+    }
+    #content .navbar li {
+        font-size:1em;
+    }
 }
 
 /* for desktop/bigger screens wider than 1400px */
