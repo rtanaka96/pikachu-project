@@ -154,7 +154,7 @@ nav, .navbar {
     padding:0rem 0.5rem;
     flex-flow:row nowrap;
     display: inline;
-    font-size:0.65em;
+    font-size:1em;
 }
 .navbar li a, .navbar a, .navbar li {
     text-decoration: none;
