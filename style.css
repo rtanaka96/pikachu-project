@@ -105,6 +105,13 @@ nav, #main {
 input, button {
     font-family:'Pokemon GB', san-serif;
     font-size:1em;
+    /* enable form selecting */
+    -webkit-touch-callout: auto;
+    -webkit-user-select: auto;
+     -khtml-user-select: auto; 
+       -moz-user-select: auto; 
+        -ms-user-select: auto; 
+            user-select: auto; 
 }
 
 label {
