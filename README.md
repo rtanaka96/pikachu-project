@@ -13,7 +13,7 @@ A website dedicated to Pokemon #025, Pikachu, done as a final project for Code L
 - Has a README with: 
  - a description of the project
  - the features included to meet CSS & JS requirements
- - 
+ 
 ### CSS Requirements
 - navigation menu that expands and collapses at desktop and mobile sizes / is opened and closed via hamburger icon
 - uses flexbox to organize content areas
